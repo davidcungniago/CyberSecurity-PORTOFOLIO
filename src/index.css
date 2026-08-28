@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0e14;
+  --color-text: #e6e6e6;
+  --color-accent: #39bae6;
+  --color-success: #95b77e;
+  --color-warning: #f0c674;
+  --color-danger: #cc6666;
+  --color-card: #11161d;
+  --color-border: #1f2937;
+  
+  --font-mono: "Fira Code", "JetBrains Mono", "IBM Plex Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans antialiased selection:bg-accent/30 selection:text-accent;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0e14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #39bae6;
+}
+
+/* Blinking cursor animation */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}

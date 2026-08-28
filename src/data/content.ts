@@ -1,4 +1,4 @@
-import { Code2, Cpu, Shield, Wrench } from "lucide-react";
+import { Code2, Shield, Wrench } from "lucide-react";
 
 export const siteConfig = {
   name: "David Cungniago",
@@ -9,6 +9,7 @@ export const siteConfig = {
   status: "Available for opportunities",
   email: "cndavid784@gmail.com",
   github: "https://github.com/davidcungniago",
+  linkedin: "https://linkedin.com/in",
 };
 
 export const aboutData = {
